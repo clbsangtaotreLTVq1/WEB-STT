@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto",sans-serif;
+}
+.container{
+    width: 980px;
+    margin: 0 auto;
+}
+header{
+    height: 250px;
+    background: #08b1ef ;
+    margin: 0 auto;
+
+}
+header img{
+    margin: 0;
+    height: 240x;
+    width: 240px;
+    margin: 0 auto;
+    
+}
+nav{
+    height: 50px;
+    background:#efe008;
+}
+nav .menu ul{
+    list-style: none;
+}
+nav .menu ul li{
+    float: left;
+    line-height: 50px;
+    padding: 0 15px;
+}
+nav .menu ul li a{
+    color: #fafafa;
+    font-size: 20px;
+    text-decoration: none;
+}
+nav .search{
+    line-height: 35px;
+    float: right;
+}
+div div img{
+    height:415px;
+    width: 980px;
+}
+div header p{
+    float:right;
+    padding-right: 290px;
+    padding-top: 100px;
+}
