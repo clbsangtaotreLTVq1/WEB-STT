@@ -55,17 +55,19 @@ article h3{
     font-size: 20px;
     text-transform: uppercase;
     font-weight: bold;
+    margin-bottom: 50px;
 }
-
-article h5{
+article .h3-1{
     text-align: center;
     padding: 15px 0;
     color: #0004ff;
     font-size: 20px;
     text-transform: uppercase;
     font-weight: bold;
+    margin-bottom: 50px;
     margin-top: 500px;
 }
+
 article .new_list .news_item img{
     width: 260px;
     height: 260px;
@@ -118,8 +120,54 @@ article .new_list1 .news_item1 h6{
     margin: 0 auto;
 }
 
+
 footer{
-    margin-top: 500px;
+    margin-top: 700px;
+    background:#00b3ff;
+    height:250px;
+    
+}
+.grid{
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.grid_row{
+    width: 26.5%;
+    padding: 2%;
+    float: left;
+    margin-right: 3%;
+}
+#mm{
+    margin-right: 0;
+    margin-left: 0;
+    float: right
+}
+.grid_column-2{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.667%;
+}
+.grid_column-2-4{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+.grid_column-10{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3334%;
+}
+footer h5{
+    text-align: center;
+    padding: 15px 0;
+    color: #fdfdfd;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
     background:#00b3ff;
     height: -200px;
 }
