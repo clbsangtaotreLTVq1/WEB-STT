@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Store</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #4cadaf;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+
+    main {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+
+    .product {
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+      position: relative;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 200px;
+      margin-bottom: 10px;
+    }
+
+    .product-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .quantity {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .quantity input {
+      width: 40px;
+      text-align: center;
+      margin: 0 5px;
+    }
+
+    .price {
+      font-size: 1.2em;
+      color: #e44d26;
+    }
+
+    .btn {
+      background-color: #e44d26;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .btn:hover {
+      background-color: #e6471c;
+    }
+
+    .cart {
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    #cart-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    #cart-list li {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #total {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SÁNG TẠO TRẺ Online Store(test)</h1>
+  </header>
+
+  <main>
+    <!-- Product 1 -->
+    <div class="product" data-id="1">
+      <img src="product1.jpg" alt="Product 1">
+      <div class="product-info">
+        <div>
+          <h2>Product 1</h2>
+          <p>Description of Product 1 goes here.</p>
+        </div>
+        <div class="price">$19.99</div>
+      </div>
+      <div class="quantity">
+        <label for="quantity1">Quantity:</label>
+        <input type="number" id="quantity1" min="1" value="1">
+      </div>
+      <button class="btn" onclick="addToCart(1)">Add to Cart</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product" data-id="2">
+      <img src="product2.jpg" alt="Product 2">
+      <div class="product-info">
+        <div>
+          <h2>Product 2</h2>
+          <p>Description of Product 2 goes here.</p>
+        </div>
+        <div class="price">$29.99</div>
+      </div>
+      <div class="quantity">
+        <label for="quantity2">Quantity:</label>
+        <input type="number" id="quantity2" min="1" value="1">
+      </div>
+      <button class="btn" onclick="addToCart(2)">Add to Cart</button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product" data-id="3">
+      <img src="product3.jpg" alt="Product 3">
+      <div class="product-info">
+        <div>
+          <h2>Product 3</h2>
+          <p>Description of Product 3 goes here.</p>
+        </div>
+        <div class="price">$39.99</div>
+      </div>
+      <div class="quantity">
+        <label for="quantity3">Quantity:</label>
+        <input type="number" id="quantity3" min="1" value="1">
+      </div>
+      <button class="btn" onclick="addToCart(3)">Add to Cart</button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product" data-id="4">
+      <img src="product4.jpg" alt="Product 4">
+      <div class="product-info">
+        <div>
+          <h2>Product 4</h2>
+          <p>Description of Product 4 goes here.</p>
+        </div>
+        <div class="price">$49.99</div>
+      </div>
+      <div class="quantity">
+        <label for="quantity4">Quantity:</label>
+        <input type="number" id="quantity4" min="1" value="1">
+      </div>
+      <button class="btn" onclick="addToCart(4)">Add to Cart</button>
+    </div>
+  </main>
+
+  <div class="cart">
+    <h2>Shopping Cart</h2>
+    <ul id="cart-list"></ul>
+    <p id="total">Total: $0.00</p>
+    <button class="btn" onclick="checkout()">Checkout</button>
+  </div>
+
+  <script>
+    const products = [
+      { id: 1, name: 'Product 1', price: 19.99 },
+      { id: 2, name: 'Product 2', price: 29.99 },
+      { id: 3, name: 'Product 3', price: 39.99 },
+      { id: 4, name: 'Product 4', price: 49.99 },
+    ];
+
+    function addToCart(productId) {
+      const product = products.find(p => p.id === productId);
+      const quantityInput = document.getElementById(`quantity${productId}`);
+      const quantity = parseInt(quantityInput.value, 10);
+
+      if (product) {
+        const existingCartItem = cart.find(item => item.id === productId);
+
+        if (existingCartItem) {
+          existingCartItem.quantity += quantity;
+        } else {
+          cart.push({ ...product, quantity });
+        }
+
+        updateCart();
+      }
+    }
+
+    function updateCart() {
+      const cartList = document.getElementById('cart-list');
+      const totalElement = document.getElementById('total');
+      let total = 0;
+
+      // Clear the previous items in the cart
+      cartList.innerHTML = '';
+
+      // Add each item to the cart
+      cart.forEach(item => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+          <span>${item.name} (Quantity: ${item.quantity})</span>
+          <span>$${(item.price * item.quantity).toFixed(2)}</span>
+        `;
+        cartList.appendChild(li);
+        total += item.price * item.quantity;
+      });
+
+      // Update the total amount
+      totalElement.textContent = `Total: $${total.toFixed(2)}`;
+    }
+
+    function checkout() {
+      alert('Checkout functionality would be implemented on the backend.');
+      // Additional logic for handling the checkout process would be implemented on the backend.
+    }
+
+    const cart = [];
+
+    document.addEventListener('DOMContentLoaded', () => {
+      updateCart();
+    });
+  </script>
+
+</body>
+</html>
+
