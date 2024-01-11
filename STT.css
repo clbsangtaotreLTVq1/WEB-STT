@@ -64,7 +64,7 @@ article h5{
     font-size: 20px;
     text-transform: uppercase;
     font-weight: bold;
-    margin-top: 400px;
+    margin-top: 500px;
 }
 article .new_list .news_item img{
     width: 260px;
@@ -112,8 +112,14 @@ article .new_list1 .news_item1 h6{
     font-size: 16px;
     color: #decf00;
 }
-footer p{
-    height: 250px;
-    background: #08b1ef ;
+.grid {
+    width: 980px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+footer{
     margin-top: 500px;
+    background:#00b3ff;
+    height: -200px;
 }
