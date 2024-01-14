@@ -1,141 +1,122 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:ital,wght@0,400;0,500;0,600;1,200;1,400;1,500&display=swap');
+
 *{
     padding: 0;
     margin: 0;
-    font-family: "Roboto",sans-serif;
+    box-sizing: border-box;
+    font-size: 'Poppins', sans-serif;
+    cursor: pointer;
 }
-.container{
+#wrapper #header .logo img{
+    height: 100px;
+    width: 100px;
+}
+#wrapper{
     width: 980px;
     margin: 0 auto;
 }
-header{
-    height: 250px;
-    background: #08b1ef;
-}
-header img{
-    margin: 0;
-    height: 240x;
-    width: 240px;
-    margin: 0 auto;
-}
-header p{
+#header{
+    width: 100%;
+    padding: 0px 30px;
+    margin-top: 33px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding-left: 100px;
-    color:#ffee00 ;
 }
-nav{
-    height: 50px;
-    background:#08d4ef;
-}
-nav .menu ul{
+#menu {
     list-style: none;
+    display: flex;
 }
-nav .menu ul li{
-    float: left;
-    line-height: 50px;
-    padding: 0 30px;
+#menu .item{
+    margin: 0px 25px;
 }
-nav .menu ul li a{
-    color: #fafafa;
-    font-size: 20px;
+#menu .item a{
+    color: aqua;
     text-decoration: none;
-}
-nav .search{
-    line-height: 20px;
-    float: right;
-}
-div div img{
-    height: 500px ;
-    width: 980px;
-}
-div header p{
-    float:right;
-    padding-right: 290px;
-    padding-top: 100px;
-    padding-bottom: 30px;
-}
-article h3{
-    text-align: center;
-    padding: 15px 0;
-    color: #0004ff;
-    font-size: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-bottom: 50px;
 
 }
-article .h3-1{
-    text-align: center;
-    padding: 15px 0;
-    color: #0004ff;
-    font-size: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-bottom: 50px;
-    margin-top: 700px;
+
+#actions{
+
+    display:flex;
+
+}
+#actions .item{
+    margin-left: 22px;
+}
+#actions .item img{
+    height: 100px;
+    width: 100px;
 }
 
-article .new_list .news_item img{
-    width: 260px;
-    height: 260px;
-    margin: 10px auto;
+
+
+#banner {
+    width: 100%;
+    background-image: url('picture/pexels-rodion-kutsaiev-9436715-2.jpg');
+    height: 463px ;
+    margin-top: 40px;
+    display: flex;
+    padding: 0px 133px;
+    position: relative;
+} 
+
+#banner .box-left, #banner .box-right{
+    width: 50%;
+}
+
+#banner .box-left h2{
+    font-size: 48px;
+    margin-top: 75px;
+    color: aliceblue;
+}
+
+#banner .box-left p{
+    color: rgb(255, 205, 5);
+}
+
+#banner .box-left button{
+    width: 191px;
+    height: 40px;
+    margin-top: 41px;
+    background: black;
+    border: none;
+    outline: none;
+    color:aliceblue ;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+#banner .box-left button:hover{
+    background: orange;
+}
+
+#banner .box-right{
+    padding-left: 200px;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
-article .new_list .news_item2 img{
-    width: 260px;
-    height: 260px;
-    margin: 10px auto;
-    align-items: center;
-}
-article .new_list1 .news_item2 img{
-    width: 260px;
-    height: 260px;
-    margin: 10px auto;
-    align-items: center;
-}
-article .new_list .news_item{
-    width: 26.5%;
-    padding: 2%;
-    float: left;
-    border: 2px solid #ff9900;
-    margin-right: 3%;
-    border-radius: 15px;
+#banner .box-right img{
+    margin: 0px 10px;
     animation: animation 3s infinite linear;
-    height: 500px;
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
 }
-article .new_list .news_item2{
-    width: 26.5%;
-    padding: 2%;
-    float: left;
-    border: 2px solid #ff9900;
-    margin-right: 3%;
-    border-radius: 15px;
-    animation: animation 3s infinite linear;
-    height: 500px;
+
+#banner .box-right img:nth-child(1)
+{
+    animation-delay: 0.5s;
 }
-article .new_list1 .news_item2{
-    width: 26.5%;
-    padding: 2%;
-    float: left;
-    border: 2px solid #fffb00;
-    margin-right: 3%;
-    border-radius: 15px;
-    animation: animation 3s infinite linear;
-    height: 500px;
+
+#banner .box-right img:nth-child(2)
+{
+    animation-delay: 1s;
 }
-#fixx{
-    margin-right: 0;
-    margin-left: 0;
-    float: right;
-    animation: animation 3s infinite linear;
-}
-article .new_list .news_item h4{
-    font-size: 16px;
-    color: #decf00;
-}
-article .new_list1 .news_item2 h6 {
-    font-size: 16px;
-    color: #000000;
-}
+
 @keyframes animation {
     0%{
         transform: translateY(0px);
@@ -148,82 +129,57 @@ article .new_list1 .news_item2 h6 {
     }
 }
 
-article .new_list1 .news_item1 img{
-    width: 260px;
-    height: 260px;
-    margin: 10px auto;
-    align-items: center;
+.to-bottom{
+    position: absolute;
+    color: red;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
 }
-article .new_list1 .news_item1{
-    width: 26.5%;
-    padding: 2%;
-    float: left;
-    border: 2px solid #1ba9dd;
-    margin-right: 3%;
-    border-radius: 15px;
-    height: 500px;   
-    animation: animation 3s infinite linear;
-}
-#fixx1{
-    margin-right: 0;
-    margin-left: 0;
-    float: right;
-    animation: animation 3s infinite linear;
-}
-article .new_list1 .news_item1 h6{
-    font-size: 16px;
-    color: #decf00;
-}
-.grid {
-    width: 980px;
-    max-width: 100%;
-    margin: 0 auto;
+.to-bottom a img{
+    height: 50px;
+    width: 50px;
 }
 
-
-footer{
-    margin-top: 700px;
-    background:#00b3ff;
-    height:200px;
-    
+#wp-products{
+    padding-top: 116px;
+    padding-bottom: 78px;
+    /*padding-left: 134px;*/
+    /*padding-right: 134px;*/
 }
-.grid{
-    width: 1200px;
-    max-width: 100%;
-    margin: 0 auto;
+#list-products .item img{
+    height: 225px;
+    width: 225px;
+    display: block;
+    margin: 0px auto;
+    margin-top: 17px;
 }
-.grid_row{
-    width: 26.5%;
-    padding: 2%;
-    float: left;
-    margin-right: 3%;
+#list-products .stars{
+    display: flex;
+    margin: 0px auto;
 }
-#mm{
-    margin-right: 0;
-    margin-left: 0;
-    float: right
-}
-.grid_column-2{
-    padding-left: 5px;
-    padding-right: 5px;
-    width: 16.667%;
-}
-.grid_column-2-4{
-    padding-left: 5px;
-    padding-right: 5px;
-    width: 20%;
-}
-.grid_column-10{
-    padding-left: 5px;
-    padding-right: 5px;
-    width: 83.3334%;
-}
-footer h5{
+#wp-products h2{
     text-align: center;
-    padding: 15px 0;
-    color: #fdfdfd;
-    font-size: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-bottom: 50px;
+    margin-bottom: 76px;
+    font-size: 32px;
+    color: aqua;
+}
+
+#list-products{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#list-products .item{
+    width: 290px;
+    height: 500px;
+    background: #00ffbf ;
+    border-radius: 15px;
+}
+#list-products .stars img{
+    height: 50px;
+    width: 50px;
 }
