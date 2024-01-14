@@ -80,11 +80,43 @@ article .new_list .news_item img{
     margin: 10px auto;
     align-items: center;
 }
+article .new_list .news_item2 img{
+    width: 260px;
+    height: 260px;
+    margin: 10px auto;
+    align-items: center;
+}
+article .new_list1 .news_item2 img{
+    width: 260px;
+    height: 260px;
+    margin: 10px auto;
+    align-items: center;
+}
 article .new_list .news_item{
     width: 26.5%;
     padding: 2%;
     float: left;
     border: 2px solid #1ba9dd;
+    margin-right: 3%;
+    border-radius: 15px;
+    animation: animation 3s infinite linear;
+    height: 500px;
+}
+article .new_list .news_item2{
+    width: 26.5%;
+    padding: 2%;
+    float: left;
+    border: 2px solid #fffb00;
+    margin-right: 3%;
+    border-radius: 15px;
+    animation: animation 3s infinite linear;
+    height: 500px;
+}
+article .new_list1 .news_item2{
+    width: 26.5%;
+    padding: 2%;
+    float: left;
+    border: 2px solid #fffb00;
     margin-right: 3%;
     border-radius: 15px;
     animation: animation 3s infinite linear;
