@@ -132,6 +132,10 @@ article .new_list .news_item h4{
     font-size: 16px;
     color: #decf00;
 }
+article .new_list1 .news_item2 h6 {
+    font-size: 16px;
+    color: #000000;
+}
 @keyframes animation {
     0%{
         transform: translateY(0px);
