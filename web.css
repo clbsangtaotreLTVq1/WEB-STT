@@ -180,7 +180,8 @@
 #list-products .item{
     width: 980px;
     height: 600px;
-    background: #00ffbf ;
+    
+    background: #00ffd0 ;
     border-radius: 15px;
     margin-top: 40px;
     transition: 0.4s;
@@ -215,5 +216,5 @@
     margin-top: 150px;
 }
 #list-products .item:hover{
-    background: #2bff00 ;
+    background: #6a48ee ;
 }
