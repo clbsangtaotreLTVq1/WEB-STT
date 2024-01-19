@@ -5,7 +5,6 @@
     margin: 0;
     box-sizing: border-box;
     font-size: 'Poppins', sans-serif;
-    cursor: pointer;
 }
 #wrapper #header .logo img{
     height: 100px;
