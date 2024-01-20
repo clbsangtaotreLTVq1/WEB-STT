@@ -212,7 +212,7 @@
     color: rgb(170, 0, 0);
     font-weight: bold;
     font-size: 20px;
-    margin-top: 200px;
+    margin-top: 150px;
 }
 #list-products .item:hover{
     background: #00ffff ;
