@@ -212,8 +212,83 @@
     color: rgb(170, 0, 0);
     font-weight: bold;
     font-size: 20px;
-    margin-top: 150px;
+    margin-top: 130px;
+
 }
 #list-products .item:hover{
     background: #00ffff ;
+}
+
+.list-page{
+    width: 50%;
+    margin: 0px auto;
+}
+
+.list-page{
+    display: flex;
+    margin-top: 30px;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+.list-page .item{
+    margin: 0px 20px;
+    width: 37px;
+    height: 37px;
+    background: #778181;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list-page .item a{
+    color: #fff;
+    text-decoration: none;
+}
+
+#footer{
+    width: 980px;
+    background-color: #646b6b;
+    height: 322px;
+    margin-top: 338px;
+    padding: 0px 63px;
+    padding-top: 57px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#footer .box{
+    width: 250px;
+    color: #fff;
+}
+
+#footer .box .quick-menu{
+    margin-top: 40px;
+
+}
+
+#footer .box .quick-menu .item{
+    margin-bottom: 12px;
+}
+
+#footer .box .quick-menu .item a{
+    color: #fff;
+    text-decoration: none;
+}
+
+#footer .box form input{
+    width: 294px;
+    height: 42px;
+    background: transparent;
+    padding-left: 20px;
+    color: #fff;
+}
+
+#footer .box form button{
+    background: #646b6b;
+    box-shadow: 5px 5px 4px rgba(0,0,0.25);
+    width: 163px;
+    height: 38px;
+    margin-top: 29px;
+    color: #fff;
 }
