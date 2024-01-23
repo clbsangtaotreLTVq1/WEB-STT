@@ -237,3 +237,8 @@ footer h5{
     font-weight: bold;
     margin-bottom: 50px;
 }
+
+footer .footer_list a img{
+    height: 160px;
+    width: 160px;
+}
