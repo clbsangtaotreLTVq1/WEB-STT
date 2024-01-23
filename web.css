@@ -248,7 +248,7 @@
 
 #footer{
     width: 980px;
-    background-color: #646b6b;
+    background-color: #cecece;
     height: 322px;
     margin-top: 338px;
     padding: 0px 63px;
@@ -285,7 +285,7 @@
 }
 
 #footer .box form button{
-    background: #646b6b;
+    background: #959a9a;
     box-shadow: 5px 5px 4px rgba(0,0,0.25);
     width: 163px;
     height: 38px;
