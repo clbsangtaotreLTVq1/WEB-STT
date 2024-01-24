@@ -24,6 +24,12 @@ header p{
     height: 120px;
     width: 350px;
 }
+video{
+    height: 550px;
+    width: 980px;
+    padding-top: 0px;
+    border-radius: 30px;
+}
 nav{
     height: 50px;
     background:#08d4ef;
@@ -192,7 +198,6 @@ article .new_list1 .news_item1 h6{
 
 
 footer{
-    margin-top: 700px;
     background:#00b3ff;
     height:200px;
     
