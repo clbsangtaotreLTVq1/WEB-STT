@@ -6,7 +6,6 @@
     <title>CLB SÁNG TẠO TRẺ</title>
     <link rel="stylesheet" href="STT.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src = "web.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
@@ -30,16 +29,12 @@
                 </ul>
             </div>
         <div class="parent">
-            <input class="input" type="type" placeholder="Search..." id = "search" 
-            oninput="searchUser()"/>
-            <button class="btn">
-                <i class="fa-solid fa-magnifying-glass">TÌM KIẾM</i>
-            </button>
+            <input id = "myText">
+            <button id ="mySubmit">TÌM KIẾM</button>
         </div>
         </nav>
         <div id="slide">
             <a href=""><img src="picture/306733115_2943617999268435_6378600953392488341_n.jpg" alt=""></a>
-            
         </div>
         <article>
             <h3>Tin tức hoạt động</h3>
@@ -160,5 +155,13 @@ Thông tin liên hệ CLB:
             </div>
         </footer>
     </div>
+
+    <script>
+        let Search;
+        document.getElementById("mySubmit").onclick = function(){
+            Search = document.getElementById("myText").value;
+            console.log(Search);
+        }
+    </script>
 </body>
 </html>
